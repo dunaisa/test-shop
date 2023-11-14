@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 20px 0 0;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.header__counter-container {
+  display: flex;
+  position: relative;
+}
+
+.header__counter {
+  position: absolute;
+  bottom: 20%;
+  right: 0;
+  padding: 0 5px;
+  margin: 0;
+  border-radius: 50%;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
