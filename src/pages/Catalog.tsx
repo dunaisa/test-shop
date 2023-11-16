@@ -1,10 +1,9 @@
-import CardsContainer from "../components/CardsContainer/CardsContainer";
-
+import ProductCardsContainer from "../components/CardsContainer/CardsContainer";
 
 
 const Catalog = ():JSX.Element => {
   return (
-    <CardsContainer />
+    <ProductCardsContainer />
   )
 }
 

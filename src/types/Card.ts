@@ -4,3 +4,7 @@ export type Card = {
   name: string,
   price: number,
 };
+
+export type CardArray = {
+  items: Card[];
+};

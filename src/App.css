@@ -4,7 +4,7 @@
 }
 
 .page {
-  padding: 0 20px;
+  padding: 20px 20px;
   margin: 0;
   max-width: 1440px;
   width: 100%;
@@ -14,4 +14,5 @@
   background-color: #ffffff;
   min-height: 100vh;
   color: #000000;
+  align-items: center;
 }

@@ -1,23 +1,35 @@
 import { useEffect } from "react";
 import './CardsContainer.css';
-import Card from "../Card/Card";
-import { fetchCards } from "../../store/reducers/ActionCreators";
+import ProductCard from "../Card/Card";
+// import { fetchCards, setTextCard } from "../../store/reducers/CardsSlice";
+// import { toogleBtnText } from '../../store/reducers/CardSlice';
+import { fetchCards } from "../../store/reducers/CardsSlice";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
+import { Card } from "../../types/Card";
 
-const CardsContainer = ():JSX.Element => {
+
+
+const ProductCardsContainer = ():JSX.Element => {
 
   const dispatch = useAppDispatch();
-  const { cards, isLoading, error } = useAppSelector(state => state.cardReducer);
+  const { cards: {items}, isLoading, error} = useAppSelector(state => state.cards);
+  // const {btnText, isClicked}  = useAppSelector(state => state.card);
 
   useEffect(() => {    
     dispatch(fetchCards());
+    // dispatch(toogleBtnText(isClicked))
   }, []);
 
   return (
-    <main className='main'>
-      <Card />
-    </main>    
+    <ul className='cards'>
+      {
+        items.map((card) => 
+          <ProductCard key={card.id} card={card}/>
+        )
+      }
+      
+    </ul>    
   )
 }
 
-export default CardsContainer;
+export default ProductCardsContainer;
