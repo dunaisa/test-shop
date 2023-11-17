@@ -1,8 +1,11 @@
-import { Card } from "./Card";
+export type CartItem = {
+  id: number,
+  name: string,
+  price: number,
+};
 
 
 export type Cart = {
-  items: Card[],
-  totalValue: number,
+  items: CartItem[],
   totalPrice: number,
 };

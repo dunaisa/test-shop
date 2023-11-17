@@ -20,25 +20,12 @@ const ProductCard = (props: ProductCardProps):JSX.Element => {
 
   const {items}  = useAppSelector(state => state.cart);
 
-  // const toogleCardState = () => {
-    
-  //   if (!isClicked) {
-  //     dispatch(addCard(props.card))
-  //     dispatch(toogleBtnText('Удалить'))
-  //   } else {
-  //     dispatch(removeCard(id))
-  //     dispatch(toogleBtnText('Добавить'))
-  //   }
-    
-  // }
-
-  const isCardAdd = items.some(item => item.id === props.card.id)
+  const isCardAdd = items.some(item => item.id === id)
 
   const toogleCardState = () => {
     dispatch(toggleCard(props.card))
   }
   
-
   return (
     <li className='card'>
       <img src={image} alt="" className='card__image'/>
