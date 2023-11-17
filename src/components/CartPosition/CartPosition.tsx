@@ -1,7 +1,8 @@
-import { Fragment, useEffect } from 'react';
-import { useAppDispatch} from '../../hooks/redux';
+import { Fragment } from 'react';
+import { useAppDispatch } from '../../hooks/redux';
 import { CartItem } from '../../types/Cart';
 import { deleteCard } from '../../store/reducers/CartSlice';
+import './CartPosition.css';
 
 type CartPositionProps = {
   item: CartItem,
@@ -18,17 +19,16 @@ const CartPosition = (props: CartPositionProps):JSX.Element => {
   }
 
   return (
-    <Fragment>
-      
-      <tr>
-        <td>
+    <Fragment>      
+      <tr className='table__body-row'>
+        <td className='table__body-cell'>
           {name}
         </td>
-        <td>
+        <td className='table__body-cell'>
           {price.toLocaleString('ru')}
         </td>
-        <td>
-          <button onClick={handleDeleteItem}>Удалить</button>
+        <td className='table__body-cell'>
+          <button onClick={handleDeleteItem} className='table__body-btn'>Удалить</button>
         </td>
       </tr>
       

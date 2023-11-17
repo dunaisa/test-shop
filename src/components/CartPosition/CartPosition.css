@@ -1,0 +1,32 @@
+.table__body-cell {
+  text-align: left;
+	border: none;
+	padding: 10px 15px;
+	font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+	vertical-align: top;
+}
+
+.table__body-cell:nth-of-type(1) {
+  width: 530px;
+}
+
+.table__body-row:nth-child(even) {
+	background: #F8F8F8;
+}
+.table__body-row:last-child .table__body-cell{
+	border-bottom: 1px solid #ddd;
+}
+.table__body-row:last-child .table__body-cell:first-child {
+	border-radius: 0 0 0 20px;
+}
+.table__body-row:last-child .table__body-cell:last-child {
+	border-radius: 0 0 20px 0;
+}
+
+.table__body-btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+}

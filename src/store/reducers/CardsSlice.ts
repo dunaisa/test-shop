@@ -1,9 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { CardArray } from "../../types/Card"
+import { CardsArray } from "../../types/Card"
+import { CardsAPI } from "../../API/CardsAPI";
 
 type CardsState = {
-  cards: CardArray;
+  cards: CardsArray;
   isLoading: boolean;
   error: string;
 };
@@ -14,11 +15,11 @@ const initialState: CardsState = {
   error: '',
 };
 
-export const fetchCards = createAsyncThunk<CardArray, void>(
+export const fetchCards = createAsyncThunk<CardsArray, void>(
   "cards/fetchCards",
   async(_, thunkAPI) => {
     try {
-      const res = await axios.get<CardArray>('https://appevent.ru/dev/task1/catalog');
+      const res = await axios.get<CardsArray>(`${CardsAPI}/catalog`);
       return res.data
     } catch {
         return thunkAPI.rejectWithValue('Something went wrong')

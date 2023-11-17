@@ -1,8 +1,7 @@
-
 import { Link } from 'react-router-dom';
+import { useAppSelector } from '../../hooks/redux';
 import './Header.css';
 import CartIcon from '../../images/cart-icon.png';
-import { useAppSelector } from '../../hooks/redux';
 
 const Header = ():JSX.Element => {
 

@@ -1,13 +1,9 @@
+import { Link } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-// import { addCardToCart, toogleTextCard } from '../../store/reducers/CardsSlice';
-// import { toogleBtnText } from '../../store/reducers/CardsSlice';
-// import { toogleBtnText } from '../../store/reducers/CardSlice';
-// import { toggleCard } from '../../store/reducers/CardsSlice';
-// import { addCard, removeCard } from '../../store/reducers/CartSlice';
 
 import { toggleCard } from '../../store/reducers/CartSlice';
 import { Card } from '../../types/Card';
-import './Card.css';
+import './ProductCard.css';
 
 type ProductCardProps = {
   card: Card,
@@ -31,7 +27,12 @@ const ProductCard = (props: ProductCardProps):JSX.Element => {
       <img src={image} alt="" className='card__image'/>
       <span className='card__name'>{name}</span>
       <span className='card__price'>{price.toLocaleString('ru')}</span>
-      <button className='card__btn' onClick={toogleCardState}>{isCardAdd ? 'Удалить' : 'Добавить'}</button>  
+      <div className='card__btn-сontainer' onClick={toogleCardState}>
+        {
+          !isCardAdd ? <button className='card__btn'>Добавить в корзину</button> : <Link to='/cart' className='card__btn card__btn_type_link'>Оформить заказ</Link>
+        }
+
+      </div>
     </li>
   )
 }

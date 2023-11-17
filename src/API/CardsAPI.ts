@@ -1,0 +1,1 @@
+export const CardsAPI = 'https://appevent.ru/dev/task1'

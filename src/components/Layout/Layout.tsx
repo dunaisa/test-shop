@@ -1,6 +1,6 @@
+import { Fragment } from 'react';
 import './Layout.css';
 import Header from "../Header/Header";
-import { Fragment } from 'react';
 
 type LayoutProps = {
   children: React.ReactNode

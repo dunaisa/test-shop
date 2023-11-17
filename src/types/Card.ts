@@ -5,6 +5,6 @@ export type Card = {
   price: number,
 };
 
-export type CardArray = {
+export type CardsArray = {
   items: Card[];
 };

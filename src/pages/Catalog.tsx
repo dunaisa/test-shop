@@ -1,4 +1,4 @@
-import ProductCardsContainer from "../components/CardsContainer/CardsContainer";
+import ProductCardsContainer from "../components/ProductCardsContainer/ProductCardsContainer";
 
 
 const Catalog = ():JSX.Element => {
