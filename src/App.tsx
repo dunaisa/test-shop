@@ -21,8 +21,3 @@ const App = ():JSX.Element => {
 };
 
 export default App;
-
-// function fetchCards(): any {
-//   throw new Error('Function not implemented.');
-// }
-
